@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семестровая работа</title>
+    <link rel="stylesheet" href="../static/style/style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="page__container">
+                <h1 class="header__title">Мой Сайт</h1>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <div class="page__container">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="../pages/news.html">Новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="../pages/practices.html">Практики</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="../pages/goods.html">Товары</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="../pages/contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main">
+            <div class="page__container">
+                <section class="section profile">
+                    <h2 class="section__title">Информация об авторе</h2>
+                    <div class="profile__content">
+                        <img class="profile__photo" src="../assets/images/photo.png" alt="Фото автора" onerror="this.src='https://via.placeholder.com/200x200/3498db/ffffff?text=Фото'">
+                        <div class="profile__info">
+                            <h3 class="profile__name">Скоробагатько Иван Павлович</h3>
+                            <p class="profile__group">ЭФБО-07-24</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section about">
+                    <h2 class="section__title">Обо мне</h2>
+                    <div class="about__content">
+                        <p class="about__text">Я родился в Подмосковье в 2006 году. Учился в школе, после поступил в Московский университет. Изучаю веб-разработку.</p>
+                    </div>
+                </section>
+
+                <section class="section skills">
+                    <h2 class="section__title">Мои навыки</h2>
+                    <div class="skills__grid">
+                        <div class="skill skill--html">
+                            <h3 class="skill__title">HTML</h3>
+                        </div>
+                        <div class="skill skill--css">
+                            <h3 class="skill__title">CSS</h3>
+                        </div>
+                        <div class="skill skill--js">
+                            <h3 class="skill__title">JavaScript</h3>
+                        </div>
+                        <div class="skill skill--git">
+                            <h3 class="skill__title">GIT</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section experience">
+                    <h2 class="section__title">Мой опыт работы</h2>
+                    <div class="experience__grid">
+                        <article class="experience-card">
+                            <h3 class="experience-card__title">Освоение JavaScript</h3>
+                            <p class="experience-card__desc">Изучение JavaScript и практика</p>
+                        </article>
+                        <article class="experience-card">
+                            <h3 class="experience-card__title">Веб-разработка</h3>
+                            <p class="experience-card__desc">Разработка проектов по программе на HTML и CSS</p>
+                        </article>
+                        <article class="experience-card">
+                            <h3 class="experience-card__title">Работа с Git</h3>
+                            <p class="experience-card__desc">Освоение системы контроля версий</p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="page__container">
+                <p class="footer__text">&copy; 2024 Семестровая работа. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="../static/script.js"></script>
+</body>
+</html>
