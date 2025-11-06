@@ -428,6 +428,123 @@ body {
     line-height: 1.6;
 }
 
+.modal {
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+    background: var(--color-main);
+    color: var(--color-white);
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.modal__title {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.modal__close {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__close:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.modal__form {
+    padding: var(--space-lg);
+}
+
+.form__group {
+    margin-bottom: var(--space-md);
+}
+
+.form__label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    font-weight: bold;
+    color: var(--color-main);
+}
+
+.form__input,
+.form__textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 2px solid var(--color-light);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form__textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.modal__actions {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: flex-end;
+    margin-top: var(--space-lg);
+}
+
+.btn {
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn--primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn--primary:hover {
+    background: var(--color-main);
+}
+
+.btn--secondary {
+    background: var(--color-light);
+    color: var(--color-text);
+}
+
+.btn--secondary:hover {
+    background: #dcdde1;
+}
+
 @media (max-width: 768px) {
     .profile__content {
         flex-direction: column;
@@ -438,6 +555,10 @@ body {
         flex-direction: column;
     }
     
+    .modal__actions {
+        flex-direction: column;
+    }
+
     .skills__grid {
         grid-template-columns: 1fr;
     }

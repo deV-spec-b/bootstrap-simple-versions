@@ -259,3 +259,50 @@ document.addEventListener('keydown', function(e) {
         e.target.click();
     }
 });
+
+const openModalBtn = document.getElementById('openModalBtn');
+const contactModal = document.getElementById('contactModal');
+const closeModalBtn = document.querySelector('.modal__close');
+const cancelBtn = document.querySelector('.btn--secondary');
+
+openModalBtn.addEventListener('click', () => {
+    contactModal.showModal();
+});
+
+closeModalBtn.addEventListener('click', () => {
+    contactModal.close();
+});
+
+cancelBtn.addEventListener('click', () => {
+    contactModal.close();
+});
+
+contactModal.addEventListener('click', (e) => {
+    const dialogDimensions = contactModal.getBoundingClientRect();
+    if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+    ) {
+        contactModal.close();
+    }
+});
+
+function submitForm() {
+    const form = document.getElementById('feedbackForm');
+    const formData = new FormData(form);
+    
+    console.log('Данные формы:', Object.fromEntries(formData));
+    
+    alert('Сообщение отправлено! Мы свяжемся с вами в ближайшее время.');
+    
+    contactModal.close();
+    
+    form.reset();
+}
+
+document.getElementById('feedbackForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitForm();
+});
